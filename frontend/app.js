@@ -14,7 +14,7 @@ async function ejecutarOptimizacion() {
     };
 
     try {
-        const API_URL = "https://tu-backend.onrender.com/optimize";
+        const API_URL = "https://intellicargo-backend.onrender.com/optimize";
         const response = await fetch(API_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
