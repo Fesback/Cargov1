@@ -14,7 +14,8 @@ async function ejecutarOptimizacion() {
     };
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/optimize", {
+        const API_URL = "https://tu-backend.onrender.com/optimize";
+        const response = await fetch(API_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)
