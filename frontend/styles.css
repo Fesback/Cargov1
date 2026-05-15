@@ -1,0 +1,203 @@
+:root {
+    --bg: #F5F1E8;
+    --primary: #3E5F44;
+    --secondary: #5E7B63;
+    --dark: #1F1F1F;
+    --card: #FAF8F3;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--dark);
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, nav, .manrope {
+    font-family: 'Manrope', sans-serif;
+  }
+
+  /* ── Subtle dot grid background ── */
+  .dot-grid {
+    background-image: radial-gradient(circle, #3E5F4420 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  /* ── Glassmorphism card ── */
+  .glass {
+    background: rgba(250, 248, 243, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(62, 95, 68, 0.12);
+  }
+
+  /* ── Engine dark glass ── */
+  .engine-glass {
+    background: rgba(30, 38, 32, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(94, 123, 99, 0.3);
+  }
+
+  /* ── Animations ── */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-10px); }
+  }
+  @keyframes floatB {
+    0%, 100% { transform: translateY(0px) rotate(6deg); }
+    50%       { transform: translateY(-14px) rotate(6deg); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 0.3; }
+    50%       { opacity: 1; }
+  }
+
+  .float-a { animation: float 5s ease-in-out infinite; }
+  .float-b { animation: floatB 6.5s ease-in-out infinite; }
+  .float-c { animation: float 4s ease-in-out infinite 1s; }
+
+  .fade-up { animation: fadeUp 0.7s ease both; }
+  .fade-up-1 { animation: fadeUp 0.7s ease 0.1s both; }
+  .fade-up-2 { animation: fadeUp 0.7s ease 0.2s both; }
+  .fade-up-3 { animation: fadeUp 0.7s ease 0.35s both; }
+  .fade-up-4 { animation: fadeUp 0.7s ease 0.5s both; }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    background: var(--primary);
+    color: #FAF8F3;
+    border: none;
+    padding: 13px 28px;
+    border-radius: 10px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px rgba(62,95,68,0.18);
+  }
+  .btn-primary:hover {
+    background: #2f4a34;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(62,95,68,0.28);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 1.5px solid var(--primary);
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+  }
+  .btn-outline:hover {
+    background: var(--primary);
+    color: #FAF8F3;
+    transform: translateY(-1px);
+  }
+
+  /* ── Nav ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(245, 241, 232, 0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(62,95,68,0.1);
+  }
+
+  /* ── Pipeline step ── */
+  .pipeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+  }
+  .pipeline-icon {
+    width: 52px; height: 52px;
+    background: rgba(62,95,68,0.1);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(62,95,68,0.18);
+  }
+
+  /* ── Table ── */
+  table { border-collapse: collapse; width: 100%; }
+  td, th {
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(62,95,68,0.1);
+    font-size: 14px;
+  }
+  th {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--secondary);
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(62,95,68,0.04); }
+
+  /* ── Badge ── */
+  .badge {
+    display: inline-block;
+    font-family: 'Manrope', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 6px;
+    background: rgba(62,95,68,0.12);
+    color: var(--primary);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── Form inputs ── */
+  input[type="number"] {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    background: rgba(62,95,68,0.08);
+    border: 1px solid rgba(94,123,99,0.3);
+    color: #FAF8F3;
+    border-radius: 10px;
+    padding: 12px 16px;
+    width: 100%;
+    outline: none;
+    transition: border 0.2s, background 0.2s;
+  }
+  input[type="number"]::placeholder { color: rgba(250,248,243,0.4); }
+  input[type="number"]:focus {
+    border-color: var(--secondary);
+    background: rgba(62,95,68,0.14);
+  }
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--secondary); border-radius: 4px; }
+
+  /* ── Pain metric card ── */
+  .pain-card {
+    background: #FFF5F5;
+    border: 1px solid rgba(220,80,80,0.15);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+  }

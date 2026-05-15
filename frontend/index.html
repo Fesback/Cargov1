@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IntelliCargo System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dot-grid">
+ 
+  <!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+  <nav>
+    <div style="max-width:1120px; margin:0 auto; padding:0 28px; height:60px; display:flex; align-items:center; justify-content:space-between;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="28" height="28" rx="8" fill="#3E5F44"/>
+          <rect x="6" y="9" width="16" height="10" rx="2.5" stroke="#FAF8F3" stroke-width="1.6"/>
+          <path d="M10 9V7.5C10 6.67 10.67 6 11.5 6h5C17.33 6 18 6.67 18 7.5V9" stroke="#FAF8F3" stroke-width="1.6"/>
+          <line x1="14" y1="12" x2="14" y2="16" stroke="#FAF8F3" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="12" y1="14" x2="16" y2="14" stroke="#FAF8F3" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span style="font-weight:800; font-size:16px; color:#1F1F1F; letter-spacing:-0.02em;">IntelliCargo</span>
+      </div>
+      <div style="display:flex; gap:28px; font-size:14px; font-weight:500; color:#5E7B63;">
+        <a href="#problem" style="text-decoration:none; color:inherit; transition:color 0.15s;" onmouseover="this.style.color='#3E5F44'" onmouseout="this.style.color='#5E7B63'">Problema</a>
+        <a href="#solution" style="text-decoration:none; color:inherit; transition:color 0.15s;" onmouseover="this.style.color='#3E5F44'" onmouseout="this.style.color='#5E7B63'">Solución</a>
+        <a href="#engine" style="text-decoration:none; color:inherit; transition:color 0.15s;" onmouseover="this.style.color='#3E5F44'" onmouseout="this.style.color='#5E7B63'">Motor</a>
+        <a href="#compare" style="text-decoration:none; color:inherit; transition:color 0.15s;" onmouseover="this.style.color='#3E5F44'" onmouseout="this.style.color='#5E7B63'">Comparar</a>
+      </div>
+      <button class="btn-primary" style="padding:9px 20px; font-size:14px;">Comenzar</button>
+    </div>
+  </nav>
+ 
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section style="max-width:1120px; margin:0 auto; padding:90px 28px 70px; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
+ 
+    <!-- Left copy -->
+    <div>
+      <div class="fade-up" style="display:inline-flex; align-items:center; gap:8px; background:rgba(62,95,68,0.1); border:1px solid rgba(62,95,68,0.18); border-radius:100px; padding:5px 14px 5px 8px; margin-bottom:28px;">
+        <span style="width:7px;height:7px;background:#3E5F44;border-radius:50%;animation:pulse-dot 2s ease-in-out infinite;display:inline-block;"></span>
+        <span style="font-size:12px; font-weight:600; color:#3E5F44; font-family:'Manrope',sans-serif; letter-spacing:0.04em;">OPTIMIZACIÓN INTELIGENTE DE CARGA</span>
+      </div>
+ 
+      <h1 class="fade-up-1" style="font-size:clamp(38px,5vw,58px); font-weight:800; line-height:1.08; letter-spacing:-0.03em; color:#1F1F1F; margin:0 0 20px;">
+        IntelliCargo<br/>
+        <span style="color:#3E5F44;">System</span>
+      </h1>
+ 
+      <p class="fade-up-2" style="font-size:18px; line-height:1.65; color:#4a5a4d; max-width:440px; margin:0 0 10px;">
+        Maximizando el valor de carga mediante algoritmos de optimización inteligente.
+      </p>
+ 
+      <p class="fade-up-2" style="font-size:13px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#5E7B63; margin:0 0 36px;">
+        Cada kilogramo importa.
+      </p>
+ 
+      <div class="fade-up-3" style="display:flex; gap:14px; flex-wrap:wrap;">
+        <button class="btn-primary">Ejecutar Simulación</button>
+        <button class="btn-outline">Explorar Algoritmos</button>
+      </div>
+ 
+      <!-- Mini trust line -->
+      <div class="fade-up-4" style="margin-top:44px; display:flex; align-items:center; gap:16px; font-size:13px; color:#8a9e8d;">
+        <span>⚡ Optimización en tiempo real</span>
+        <span style="width:1px;height:14px;background:#c8d8ca;"></span>
+        <span>📦 Motor multi-algoritmo</span>
+        <span style="width:1px;height:14px;background:#c8d8ca;"></span>
+        <span>🎯 Precisión O(n·W)</span>
+      </div>
+    </div>
+ 
+    <!-- Right visual: floating cargo dashboard wireframe -->
+    <div style="position:relative; height:360px; display:flex; align-items:center; justify-content:center;">
+ 
+      <!-- Main dashboard card -->
+      <div class="float-a glass" style="position:absolute; width:310px; border-radius:20px; padding:22px 24px; box-shadow:0 20px 60px rgba(62,95,68,0.12);">
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:#4CAF50;"></div>
+          <span style="font-size:11px;font-weight:700;color:#5E7B63;letter-spacing:0.06em;font-family:'Manrope',sans-serif;">OPTIMIZACIÓN ACTIVA</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+          <div style="background:rgba(62,95,68,0.07);border-radius:12px;padding:12px;">
+            <div style="font-size:11px;color:#8a9e8d;margin-bottom:3px;font-family:'Manrope',sans-serif;font-weight:600;">VALOR MÁX.</div>
+            <div style="font-size:22px;font-weight:800;color:#3E5F44;font-family:'Manrope',sans-serif;">$4,280</div>
+          </div>
+          <div style="background:rgba(62,95,68,0.07);border-radius:12px;padding:12px;">
+            <div style="font-size:11px;color:#8a9e8d;margin-bottom:3px;font-family:'Manrope',sans-serif;font-weight:600;">EFICIENCIA</div>
+            <div style="font-size:22px;font-weight:800;color:#3E5F44;font-family:'Manrope',sans-serif;">96.4%</div>
+          </div>
+        </div>
+        <!-- Mini bar chart -->
+        <div style="display:flex;align-items:flex-end;gap:5px;height:48px;padding:0 4px;">
+          <div style="flex:1;background:#3E5F44;opacity:0.4;border-radius:4px 4px 0 0;height:40%;"></div>
+          <div style="flex:1;background:#3E5F44;opacity:0.55;border-radius:4px 4px 0 0;height:65%;"></div>
+          <div style="flex:1;background:#3E5F44;opacity:0.7;border-radius:4px 4px 0 0;height:55%;"></div>
+          <div style="flex:1;background:#3E5F44;opacity:0.9;border-radius:4px 4px 0 0;height:85%;"></div>
+          <div style="flex:1;background:#3E5F44;border-radius:4px 4px 0 0;height:100%;"></div>
+          <div style="flex:1;background:#3E5F44;opacity:0.75;border-radius:4px 4px 0 0;height:70%;"></div>
+        </div>
+        <div style="height:1px;background:rgba(62,95,68,0.1);margin:10px 0;"></div>
+        <div style="font-size:11px;color:#8a9e8d;font-family:'Manrope',sans-serif;">8 paquetes · 420 kg cargados</div>
+      </div>
+ 
+      <!-- Floating package A -->
+      <div class="float-b" style="position:absolute;top:20px;right:0;width:76px;height:76px;">
+        <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="20" width="60" height="46" rx="8" fill="#3E5F44" opacity="0.12"/>
+          <rect x="8" y="20" width="60" height="46" rx="8" stroke="#3E5F44" stroke-width="1.5"/>
+          <line x1="38" y1="20" x2="38" y2="66" stroke="#3E5F44" stroke-width="1.2" opacity="0.5"/>
+          <rect x="24" y="10" width="28" height="12" rx="4" fill="#5E7B63" opacity="0.7"/>
+          <line x1="8" y1="43" x2="68" y2="43" stroke="#3E5F44" stroke-width="1" opacity="0.3"/>
+        </svg>
+      </div>
+ 
+      <!-- Floating package B -->
+      <div class="float-c" style="position:absolute;bottom:30px;right:10px;width:54px;height:54px;">
+        <svg viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="12" width="46" height="36" rx="6" fill="#5E7B63" opacity="0.15"/>
+          <rect x="4" y="12" width="46" height="36" rx="6" stroke="#5E7B63" stroke-width="1.4"/>
+          <line x1="27" y1="12" x2="27" y2="48" stroke="#5E7B63" stroke-width="1" opacity="0.4"/>
+          <rect x="17" y="6" width="20" height="8" rx="3" fill="#3E5F44" opacity="0.5"/>
+        </svg>
+      </div>
+ 
+      <!-- Coordinate lines (tech vibe) -->
+      <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.08;" viewBox="0 0 500 360">
+        <line x1="250" y1="0" x2="250" y2="360" stroke="#3E5F44" stroke-width="1" stroke-dasharray="4 8"/>
+        <line x1="0" y1="180" x2="500" y2="180" stroke="#3E5F44" stroke-width="1" stroke-dasharray="4 8"/>
+        <circle cx="250" cy="180" r="60" stroke="#3E5F44" stroke-width="1" fill="none"/>
+        <circle cx="250" cy="180" r="4" fill="#3E5F44"/>
+      </svg>
+    </div>
+  </section>
+ 
+  <!-- ═══════════════════════════ PROBLEM ═══════════════════════════ -->
+  <section id="problem" style="max-width:1120px; margin:0 auto; padding:80px 28px;">
+    <div style="max-width:580px; margin:0 0 52px;">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5E7B63;margin-bottom:14px;font-family:'Manrope',sans-serif;">El Problema</div>
+      <h2 style="font-size:clamp(28px,4vw,40px);font-weight:800;line-height:1.15;letter-spacing:-0.02em;color:#1F1F1F;margin:0 0 20px;">La estimación humana ya no es suficiente.</h2>
+      <p style="font-size:16px;line-height:1.75;color:#4a5a4d;margin:0;">
+        Las empresas de logística pierden miles de dólares diariamente por el uso ineficiente del espacio y las decisiones manuales de carga. Las combinaciones incorrectas de peso y valor generan capacidad desperdiciada y pérdidas operativas.
+      </p>
+    </div>
+ 
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+ 
+      <div class="pain-card">
+        <div style="font-size:36px;margin-bottom:10px;">📦</div>
+        <div style="font-size:28px;font-weight:800;font-family:'Manrope',sans-serif;color:#c0392b;margin-bottom:6px;">↑ 34%</div>
+        <div style="font-weight:700;font-family:'Manrope',sans-serif;font-size:15px;color:#1F1F1F;margin-bottom:8px;">Espacio Desperdiciado</div>
+        <p style="font-size:13px;color:#8a7070;line-height:1.6;margin:0;">La carga ineficiente deja capacidad crítica sin usar en cada envío.</p>
+      </div>
+ 
+      <div class="pain-card">
+        <div style="font-size:36px;margin-bottom:10px;">💸</div>
+        <div style="font-size:28px;font-weight:800;font-family:'Manrope',sans-serif;color:#c0392b;margin-bottom:6px;">↑ $2,400</div>
+        <div style="font-weight:700;font-family:'Manrope',sans-serif;font-size:15px;color:#1F1F1F;margin-bottom:8px;">Costos Operativos</div>
+        <p style="font-size:13px;color:#8a7070;line-height:1.6;margin:0;">Las decisiones manuales inflan los gastos generales mediante ciclos de error repetidos.</p>
+      </div>
+ 
+      <div class="pain-card">
+        <div style="font-size:36px;margin-bottom:10px;">📉</div>
+        <div style="font-size:28px;font-weight:800;font-family:'Manrope',sans-serif;color:#c0392b;margin-bottom:6px;">↓ 41%</div>
+        <div style="font-weight:700;font-family:'Manrope',sans-serif;font-size:15px;color:#1F1F1F;margin-bottom:8px;">Eficiencia Logística</div>
+        <p style="font-size:13px;color:#8a7070;line-height:1.6;margin:0;">Las heurísticas humanas fallan al evaluar compensaciones complejas de peso-valor.</p>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <!-- ═══════════════════════════ SOLUTION ═══════════════════════════ -->
+  <section id="solution" style="background:rgba(62,95,68,0.04); border-top:1px solid rgba(62,95,68,0.08); border-bottom:1px solid rgba(62,95,68,0.08); padding:80px 0;">
+    <div style="max-width:1120px;margin:0 auto;padding:0 28px;">
+ 
+      <div style="max-width:560px;margin:0 0 52px;">
+        <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5E7B63;margin-bottom:14px;font-family:'Manrope',sans-serif;">Nuestra Solución</div>
+        <h2 style="font-size:clamp(28px,4vw,40px);font-weight:800;line-height:1.15;letter-spacing:-0.02em;color:#1F1F1F;margin:0 0 20px;">Optimización más allá de la intuición humana.</h2>
+        <p style="font-size:16px;line-height:1.75;color:#4a5a4d;margin:0;">
+          IntelliCargo utiliza algoritmos de optimización avanzados para analizar peso, valor y espacio — maximizando la rentabilidad en cada ejecución.
+        </p>
+      </div>
+ 
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;">
+ 
+        <!-- DP -->
+        <div class="glass" style="border-radius:18px;padding:26px 22px;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(62,95,68,0.14)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="width:44px;height:44px;background:#3E5F44;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="2" width="7" height="7" rx="2" fill="white" opacity="0.8"/><rect x="13" y="2" width="7" height="7" rx="2" fill="white"/><rect x="2" y="13" width="7" height="7" rx="2" fill="white"/><rect x="13" y="13" width="7" height="7" rx="2" fill="white" opacity="0.6"/></svg>
+          </div>
+          <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;margin-bottom:8px;color:#1F1F1F;">Programación Dinámica</div>
+          <p style="font-size:13px;line-height:1.65;color:#5a6b5d;margin:0 0 14px;">Determina la combinación de carga más rentable con certeza matemática.</p>
+          <span class="badge">O(n · W)</span>
+        </div>
+ 
+        <!-- Greedy -->
+        <div class="glass" style="border-radius:18px;padding:26px 22px;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(62,95,68,0.14)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="width:44px;height:44px;background:#5E7B63;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2l2.5 6h6l-5 3.5 2 6.5L11 14l-5.5 4 2-6.5L2 8h6L11 2z" fill="white"/></svg>
+          </div>
+          <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;margin-bottom:8px;color:#1F1F1F;">Algoritmos Voraces</div>
+          <p style="font-size:13px;line-height:1.65;color:#5a6b5d;margin:0 0 14px;">Prioriza la carga de alto valor para decisiones rápidas y casi óptimas bajo presión de tiempo.</p>
+          <span class="badge">O(n log n)</span>
+        </div>
+ 
+        <!-- Backtracking -->
+        <div class="glass" style="border-radius:18px;padding:26px 22px;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(62,95,68,0.14)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="width:44px;height:44px;background:#4a7050;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M18 11H7m0 0l4-4m-4 4l4 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="11" r="2" fill="white" opacity="0.6"/></svg>
+          </div>
+          <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;margin-bottom:8px;color:#1F1F1F;">Vuelta Atrás</div>
+          <p style="font-size:13px;line-height:1.65;color:#5a6b5d;margin:0 0 14px;">Encuentra distribuciones espaciales eficientes explorando y podando el espacio de soluciones.</p>
+          <span class="badge">Exponential</span>
+        </div>
+ 
+        <!-- Sorting -->
+        <div class="glass" style="border-radius:18px;padding:26px 22px;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(62,95,68,0.14)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+          <div style="width:44px;height:44px;background:#3E5F44;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><line x1="4" y1="6" x2="18" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="11" x2="14" y2="11" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="16" x2="10" y2="16" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;margin-bottom:8px;color:#1F1F1F;">Ordenamiento (Merge/Quick)</div>
+          <p style="font-size:13px;line-height:1.65;color:#5a6b5d;margin:0 0 14px;">Clasifica los datos de carga al instante para un flujo de pipeline sin interrupciones.</p>
+          <span class="badge">O(n log n)</span>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ═══════════════════════════ PIPELINE ═══════════════════════════ -->
+  <section style="max-width:1120px;margin:0 auto;padding:80px 28px;">
+    <div style="text-align:center;margin-bottom:52px;">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5E7B63;margin-bottom:14px;font-family:'Manrope',sans-serif;">Cómo Funciona</div>
+      <h2 style="font-size:clamp(26px,3.5vw,38px);font-weight:800;letter-spacing:-0.02em;color:#1F1F1F;margin:0;">De datos brutos a carga óptima — en segundos.</h2>
+    </div>
+ 
+    <div style="display:flex;align-items:flex-start;gap:0;">
+ 
+      <!-- Step 1 -->
+      <div class="pipeline-step">
+        <div class="pipeline-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="3" stroke="#3E5F44" stroke-width="1.8"/><path d="M8 7V5a4 4 0 018 0v2" stroke="#3E5F44" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#1F1F1F;text-align:center;line-height:1.4;">Cargar Paquetes</div>
+        <div style="font-size:12px;color:#8a9e8d;text-align:center;line-height:1.5;max-width:100px;">Ingresar specs y pesos de carga</div>
+      </div>
+ 
+      <!-- Arrow -->
+      <div style="flex:0;padding-top:25px;color:#c8d8ca;font-size:22px;">→</div>
+ 
+      <!-- Step 2 -->
+      <div class="pipeline-step">
+        <div class="pipeline-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M8 6V4M16 6V4M3 12h18M3 18h18" stroke="#3E5F44" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#1F1F1F;text-align:center;line-height:1.4;">Clasificación Inteligente</div>
+        <div style="font-size:12px;color:#8a9e8d;text-align:center;line-height:1.5;max-width:110px;">Merge/Quicksort por densidad de valor</div>
+      </div>
+ 
+      <!-- Arrow -->
+      <div style="flex:0;padding-top:25px;color:#c8d8ca;font-size:22px;">→</div>
+ 
+      <!-- Step 3 -->
+      <div class="pipeline-step">
+        <div class="pipeline-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#3E5F44" stroke-width="1.8"/><path d="M8 12l3 3 5-5" stroke="#3E5F44" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#1F1F1F;text-align:center;line-height:1.4;">Optimización Matemática</div>
+        <div style="font-size:12px;color:#8a9e8d;text-align:center;line-height:1.5;max-width:110px;">PD &amp; Voraz calculan mejores subconjuntos</div>
+      </div>
+ 
+      <!-- Arrow -->
+      <div style="flex:0;padding-top:25px;color:#c8d8ca;font-size:22px;">→</div>
+ 
+      <!-- Step 4 -->
+      <div class="pipeline-step">
+        <div class="pipeline-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="13" width="18" height="7" rx="2" stroke="#3E5F44" stroke-width="1.8"/><rect x="6" y="4" width="12" height="9" rx="2" stroke="#3E5F44" stroke-width="1.8"/><line x1="9" y1="4" x2="9" y2="13" stroke="#3E5F44" stroke-width="1.2" opacity="0.5"/><line x1="15" y1="4" x2="15" y2="13" stroke="#3E5F44" stroke-width="1.2" opacity="0.5"/></svg>
+        </div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#1F1F1F;text-align:center;line-height:1.4;">Distribución Física</div>
+        <div style="font-size:12px;color:#8a9e8d;text-align:center;line-height:1.5;max-width:100px;">Disposición espacial vía Vuelta Atrás</div>
+      </div>
+ 
+      <!-- Arrow -->
+      <div style="flex:0;padding-top:25px;color:#c8d8ca;font-size:22px;">→</div>
+ 
+      <!-- Step 5 -->
+      <div class="pipeline-step">
+        <div class="pipeline-icon" style="background:#3E5F44;border-color:#3E5F44;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.5 6.5H21l-5.5 4 2 6.5L12 15l-5.5 4 2-6.5L3 8.5h6.5L12 2z" fill="white"/></svg>
+        </div>
+        <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#3E5F44;text-align:center;line-height:1.4;">Resultado Óptimo</div>
+        <div style="font-size:12px;color:#8a9e8d;text-align:center;line-height:1.5;max-width:100px;">Plan de carga de máximo valor entregado</div>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <!-- ═══════════════════════════ ENGINE ═══════════════════════════ -->
+  <section id="engine" style="padding:80px 0;">
+    <div style="max-width:1120px;margin:0 auto;padding:0 28px;">
+      <div style="text-align:center;margin-bottom:40px;">
+        <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5E7B63;margin-bottom:14px;font-family:'Manrope',sans-serif;">Demo Interactivo</div>
+        <h2 style="font-size:clamp(26px,3.5vw,38px);font-weight:800;letter-spacing:-0.02em;color:#1F1F1F;margin:0;">El Motor en Acción</h2>
+      </div>
+ 
+      <!-- Dark glass container -->
+      <div class="engine-glass" style="border-radius:24px;padding:40px;box-shadow:0 32px 80px rgba(0,0,0,0.22);">
+ 
+        <!-- Form -->
+        <div style="display:flex;align-items:flex-end;gap:16px;margin-bottom:36px;flex-wrap:wrap;">
+          <div style="flex:1;min-width:240px;">
+            <label id="capacity-label" for="maxCapacity" style="display:block;font-family:'Manrope',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(250,248,243,0.55);margin-bottom:8px;">Capacidad Máxima del Contenedor (kg)</label>
+            <input type="number" id="maxCapacity" placeholder="ej. 500" min="1" />
+          </div>
+          <button class="btn-primary" id="analyzeBtn" onclick="runAnalysis()" style="white-space:nowrap;padding:12px 28px;">
+            Analizar Algoritmos
+          </button>
+        </div>
+ 
+        <!-- Results grid -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;" id="resultsGrid">
+ 
+          <!-- DP Card -->
+          <div id="dpCard" style="background:rgba(62,95,68,0.18);border:1px solid rgba(94,123,99,0.3);border-radius:18px;padding:28px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+              <div>
+                <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:16px;color:#FAF8F3;">Programación Dinámica</div>
+                <div style="font-size:12px;color:rgba(250,248,243,0.45);margin-top:2px;">Solución globalmente óptima</div>
+              </div>
+              <span class="badge" style="background:rgba(62,95,68,0.35);color:#9EC9A5;">O(n · W)</span>
+            </div>
+ 
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
+              <div style="background:rgba(0,0,0,0.2);border-radius:12px;padding:14px;">
+                <div style="font-size:11px;font-weight:700;letter-spacing:0.06em;color:rgba(250,248,243,0.45);font-family:'Manrope',sans-serif;margin-bottom:4px;">VALOR MÁX.</div>
+                <div id="dp-value" style="font-size:24px;font-weight:800;color:#9EC9A5;font-family:'Manrope',sans-serif;">—</div>
+              </div>
+              <div style="background:rgba(0,0,0,0.2);border-radius:12px;padding:14px;">
+                <div style="font-size:11px;font-weight:700;letter-spacing:0.06em;color:rgba(250,248,243,0.45);font-family:'Manrope',sans-serif;margin-bottom:4px;">PESO USADO</div>
+                <div id="dp-weight" style="font-size:24px;font-weight:800;color:#9EC9A5;font-family:'Manrope',sans-serif;">—</div>
+              </div>
+            </div>
+ 
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.06em;color:rgba(250,248,243,0.45);font-family:'Manrope',sans-serif;margin-bottom:10px;">PAQUETES SELECCIONADOS</div>
+            <div id="dp-packages" style="min-height:60px;font-size:13px;color:rgba(250,248,243,0.55);font-style:italic;">Ejecuta el análisis para ver resultados…</div>
+          </div>
+ 
+          <!-- Greedy Card -->
+          <div id="greedyCard" style="background:rgba(94,123,99,0.14);border:1px solid rgba(94,123,99,0.25);border-radius:18px;padding:28px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+              <div>
+                <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:16px;color:#FAF8F3;">Algoritmo Voraz</div>
+                <div style="font-size:12px;color:rgba(250,248,243,0.45);margin-top:2px;">Casi óptimo, ultrarrápido</div>
+              </div>
+              <span class="badge" style="background:rgba(94,123,99,0.3);color:#9EC9A5;">O(n log n)</span>
+            </div>
+ 
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
+              <div style="background:rgba(0,0,0,0.2);border-radius:12px;padding:14px;">
+                <div style="font-size:11px;font-weight:700;letter-spacing:0.06em;color:rgba(250,248,243,0.45);font-family:'Manrope',sans-serif;margin-bottom:4px;">VALOR MÁX.</div>
+                <div id="greedy-value" style="font-size:24px;font-weight:800;color:#9EC9A5;font-family:'Manrope',sans-serif;">—</div>
+              </div>
+              <div style="background:rgba(0,0,0,0.2);border-radius:12px;padding:14px;">
+                <div style="font-size:11px;font-weight:700;letter-spacing:0.06em;color:rgba(250,248,243,0.45);font-family:'Manrope',sans-serif;margin-bottom:4px;">PESO USADO</div>
+                <div id="greedy-weight" style="font-size:24px;font-weight:800;color:#9EC9A5;font-family:'Manrope',sans-serif;">—</div>
+              </div>
+            </div>
+ 
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.06em;color:rgba(250,248,243,0.45);font-family:'Manrope',sans-serif;margin-bottom:10px;">PAQUETES SELECCIONADOS</div>
+            <div id="greedy-packages" style="min-height:60px;font-size:13px;color:rgba(250,248,243,0.55);font-style:italic;">Ejecuta el análisis para ver resultados…</div>
+          </div>
+ 
+        </div>
+ 
+        <p style="font-size:12px;color:rgba(250,248,243,0.3);margin:20px 0 0;text-align:center;font-family:'Manrope',sans-serif;">Conecta tu JS a <code style="background:rgba(255,255,255,0.08);padding:2px 6px;border-radius:4px;">#maxCapacity</code>, <code style="background:rgba(255,255,255,0.08);padding:2px 6px;border-radius:4px;">#analyzeBtn</code>, <code style="background:rgba(255,255,255,0.08);padding:2px 6px;border-radius:4px;">#dp-value</code>, <code style="background:rgba(255,255,255,0.08);padding:2px 6px;border-radius:4px;">#greedy-value</code> y similares.</p>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ═══════════════════════════ COMPARISON TABLE ═══════════════════════════ -->
+  <section id="compare" style="max-width:1120px;margin:0 auto;padding:80px 28px;">
+    <div style="text-align:center;margin-bottom:52px;">
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5E7B63;margin-bottom:14px;font-family:'Manrope',sans-serif;">Por Qué IntelliCargo</div>
+      <h2 style="font-size:clamp(26px,3.5vw,38px);font-weight:800;letter-spacing:-0.02em;color:#1F1F1F;margin:0;">Tradicional vs IntelliCargo</h2>
+    </div>
+ 
+    <div style="background:var(--card);border:1px solid rgba(62,95,68,0.1);border-radius:20px;overflow:hidden;box-shadow:0 8px 32px rgba(62,95,68,0.07);">
+      <table>
+        <thead>
+          <tr style="background:rgba(62,95,68,0.05);">
+            <th style="width:30%;">Dimensión</th>
+            <th>
+              <span style="display:inline-flex;align-items:center;gap:6px;">
+                <span style="width:8px;height:8px;background:#c0392b;border-radius:50%;display:inline-block;"></span>
+                Tradicional
+              </span>
+            </th>
+            <th>
+              <span style="display:inline-flex;align-items:center;gap:6px;">
+                <span style="width:8px;height:8px;background:#3E5F44;border-radius:50%;display:inline-block;"></span>
+                IntelliCargo
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:600;font-family:'Manrope',sans-serif;color:#1F1F1F;">Método</td>
+            <td style="color:#c0392b;">Decisiones Manuales</td>
+            <td style="color:#3E5F44;font-weight:600;">Optimización Matemática</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;font-family:'Manrope',sans-serif;color:#1F1F1F;">Espacio Desperdiciado</td>
+            <td style="color:#c0392b;">Alto (↑ 34%)</td>
+            <td style="color:#3E5F44;font-weight:600;">Eficiencia Máxima</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;font-family:'Manrope',sans-serif;color:#1F1F1F;">Precisión</td>
+            <td style="color:#c0392b;">Baja – Estimación Humana</td>
+            <td style="color:#3E5F44;font-weight:600;">Evaluación Algorítmica</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;font-family:'Manrope',sans-serif;color:#1F1F1F;">Tiempo de Decisión</td>
+            <td style="color:#c0392b;">Elevado – Revisión Manual</td>
+            <td style="color:#3E5F44;font-weight:600;">Procesamiento Rápido (ms)</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;font-family:'Manrope',sans-serif;color:#1F1F1F;">Escalabilidad</td>
+            <td style="color:#c0392b;">Se degrada con el volumen</td>
+            <td style="color:#3E5F44;font-weight:600;">O(n log n) – escala libremente</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+ 
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer style="border-top:1px solid rgba(62,95,68,0.1);padding:36px 28px;margin-top:20px;">
+    <div style="max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <svg width="22" height="22" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#3E5F44"/><rect x="6" y="9" width="16" height="10" rx="2.5" stroke="#FAF8F3" stroke-width="1.6"/><path d="M10 9V7.5C10 6.67 10.67 6 11.5 6h5C17.33 6 18 6.67 18 7.5V9" stroke="#FAF8F3" stroke-width="1.6"/></svg>
+        <span style="font-weight:700;font-size:14px;color:#1F1F1F;font-family:'Manrope',sans-serif;">IntelliCargo System</span>
+      </div>
+      <div style="font-size:13px;color:#8a9e8d;">Optimización Inteligente de Carga · Cada kilogramo importa.</div>
+    </div>
+  </footer>
+ 
+   <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
+    
+   <script src="app.js"></script>
+ 
+</body>
+</html>

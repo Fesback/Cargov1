@@ -1,0 +1,17 @@
+[
+    { "id": "P01", "name": "Laptops Lenovo ThinkPad", "weight": 12, "value": 850 },
+    { "id": "P02", "name": "Celulares iPhone 15 Pro", "weight": 5, "value": 1200 },
+    { "id": "P03", "name": "Monitores LG Ultrawide", "weight": 18, "value": 450 },
+    { "id": "P04", "name": "Teclados Mecánicos Keychron", "weight": 8, "value": 150 },
+    { "id": "P05", "name": "Servidores Dell PowerEdge", "weight": 35, "value": 3200 },
+    { "id": "P06", "name": "Tarjetas Gráficas RTX 4090", "weight": 10, "value": 2100 },
+    { "id": "P07", "name": "Discos Duros Externos 4TB", "weight": 6, "value": 200 },
+    { "id": "P08", "name": "Cámaras Sony Alpha", "weight": 4, "value": 900 },
+    { "id": "P09", "name": "Drones DJI Mavic", "weight": 7, "value": 1100 },
+    { "id": "P10", "name": "Consolas PS5", "weight": 15, "value": 650 },
+    { "id": "P11", "name": "Tablets iPad Pro", "weight": 6, "value": 800 },
+    { "id": "P12", "name": "Impresoras 3D Creality", "weight": 22, "value": 550 },
+    { "id": "P13", "name": "Switches Cisco 24p", "weight": 14, "value": 1300 },
+    { "id": "P14", "name": "Auriculares Bose QC", "weight": 3, "value": 250 },
+    { "id": "P15", "name": "Cables de Fibra Óptica (Rollo)", "weight": 25, "value": 400 }
+]
