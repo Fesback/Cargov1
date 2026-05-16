@@ -8,9 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body class="dot-grid">
- 
+
   <!-- ═══════════════════════════ NAV ═══════════════════════════ -->
   <nav>
     <div style="max-width:1120px; margin:0 auto; padding:0 28px; height:60px; display:flex; align-items:center; justify-content:space-between;">
@@ -24,44 +23,44 @@
         </svg>
         <span style="font-weight:800; font-size:16px; color:#1F1F1F; letter-spacing:-0.02em;">IntelliCargo</span>
       </div>
-      <div style="display:flex; gap:28px; font-size:14px; font-weight:500; color:#5E7B63;">
+      <div class="nav-links" style="font-size:14px; font-weight:500; color:#5E7B63;">
         <a href="#problem" style="text-decoration:none; color:inherit; transition:color 0.15s;" onmouseover="this.style.color='#3E5F44'" onmouseout="this.style.color='#5E7B63'">Problema</a>
         <a href="#solution" style="text-decoration:none; color:inherit; transition:color 0.15s;" onmouseover="this.style.color='#3E5F44'" onmouseout="this.style.color='#5E7B63'">Solución</a>
         <a href="#engine" style="text-decoration:none; color:inherit; transition:color 0.15s;" onmouseover="this.style.color='#3E5F44'" onmouseout="this.style.color='#5E7B63'">Motor</a>
         <a href="#compare" style="text-decoration:none; color:inherit; transition:color 0.15s;" onmouseover="this.style.color='#3E5F44'" onmouseout="this.style.color='#5E7B63'">Comparar</a>
       </div>
-      <button class="btn-primary" style="padding:9px 20px; font-size:14px;">Comenzar</button>
+      <button class="btn-primary nav-cta" style="padding:9px 20px; font-size:14px;">Comenzar</button>
     </div>
   </nav>
- 
+
   <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
-  <section style="max-width:1120px; margin:0 auto; padding:90px 28px 70px; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
- 
+  <section class="hero-grid sec" style="max-width:1120px; margin:0 auto; padding:90px 28px 70px;">
+
     <!-- Left copy -->
     <div>
       <div class="fade-up" style="display:inline-flex; align-items:center; gap:8px; background:rgba(62,95,68,0.1); border:1px solid rgba(62,95,68,0.18); border-radius:100px; padding:5px 14px 5px 8px; margin-bottom:28px;">
         <span style="width:7px;height:7px;background:#3E5F44;border-radius:50%;animation:pulse-dot 2s ease-in-out infinite;display:inline-block;"></span>
         <span style="font-size:12px; font-weight:600; color:#3E5F44; font-family:'Manrope',sans-serif; letter-spacing:0.04em;">OPTIMIZACIÓN INTELIGENTE DE CARGA</span>
       </div>
- 
+
       <h1 class="fade-up-1" style="font-size:clamp(38px,5vw,58px); font-weight:800; line-height:1.08; letter-spacing:-0.03em; color:#1F1F1F; margin:0 0 20px;">
         IntelliCargo<br/>
         <span style="color:#3E5F44;">System</span>
       </h1>
- 
+
       <p class="fade-up-2" style="font-size:18px; line-height:1.65; color:#4a5a4d; max-width:440px; margin:0 0 10px;">
         Maximizando el valor de carga mediante algoritmos de optimización inteligente.
       </p>
- 
+
       <p class="fade-up-2" style="font-size:13px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#5E7B63; margin:0 0 36px;">
         Cada kilogramo importa.
       </p>
- 
+
       <div class="fade-up-3" style="display:flex; gap:14px; flex-wrap:wrap;">
         <button class="btn-primary">Ejecutar Simulación</button>
         <button class="btn-outline">Explorar Algoritmos</button>
       </div>
- 
+
       <!-- Mini trust line -->
       <div class="fade-up-4" style="margin-top:44px; display:flex; align-items:center; gap:16px; font-size:13px; color:#8a9e8d;">
         <span>⚡ Optimización en tiempo real</span>
@@ -71,10 +70,10 @@
         <span>🎯 Precisión O(n·W)</span>
       </div>
     </div>
- 
+
     <!-- Right visual: floating cargo dashboard wireframe -->
-    <div style="position:relative; height:360px; display:flex; align-items:center; justify-content:center;">
- 
+    <div class="hero-visual" style="position:relative; height:360px; display:flex; align-items:center; justify-content:center;">
+
       <!-- Main dashboard card -->
       <div class="float-a glass" style="position:absolute; width:310px; border-radius:20px; padding:22px 24px; box-shadow:0 20px 60px rgba(62,95,68,0.12);">
         <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
@@ -103,7 +102,7 @@
         <div style="height:1px;background:rgba(62,95,68,0.1);margin:10px 0;"></div>
         <div style="font-size:11px;color:#8a9e8d;font-family:'Manrope',sans-serif;">8 paquetes · 420 kg cargados</div>
       </div>
- 
+
       <!-- Floating package A -->
       <div class="float-b" style="position:absolute;top:20px;right:0;width:76px;height:76px;">
         <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,7 +113,7 @@
           <line x1="8" y1="43" x2="68" y2="43" stroke="#3E5F44" stroke-width="1" opacity="0.3"/>
         </svg>
       </div>
- 
+
       <!-- Floating package B -->
       <div class="float-c" style="position:absolute;bottom:30px;right:10px;width:54px;height:54px;">
         <svg viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -124,7 +123,7 @@
           <rect x="17" y="6" width="20" height="8" rx="3" fill="#3E5F44" opacity="0.5"/>
         </svg>
       </div>
- 
+
       <!-- Coordinate lines (tech vibe) -->
       <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.08;" viewBox="0 0 500 360">
         <line x1="250" y1="0" x2="250" y2="360" stroke="#3E5F44" stroke-width="1" stroke-dasharray="4 8"/>
@@ -134,9 +133,9 @@
       </svg>
     </div>
   </section>
- 
+
   <!-- ═══════════════════════════ PROBLEM ═══════════════════════════ -->
-  <section id="problem" style="max-width:1120px; margin:0 auto; padding:80px 28px;">
+  <section id="problem" style="max-width:1120px; margin:0 auto; padding:80px 28px;" class="sec">
     <div style="max-width:580px; margin:0 0 52px;">
       <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5E7B63;margin-bottom:14px;font-family:'Manrope',sans-serif;">El Problema</div>
       <h2 style="font-size:clamp(28px,4vw,40px);font-weight:800;line-height:1.15;letter-spacing:-0.02em;color:#1F1F1F;margin:0 0 20px;">La estimación humana ya no es suficiente.</h2>
@@ -144,37 +143,37 @@
         Las empresas de logística pierden miles de dólares diariamente por el uso ineficiente del espacio y las decisiones manuales de carga. Las combinaciones incorrectas de peso y valor generan capacidad desperdiciada y pérdidas operativas.
       </p>
     </div>
- 
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
- 
+
+    <div class="pain-grid">
+
       <div class="pain-card">
         <div style="font-size:36px;margin-bottom:10px;">📦</div>
         <div style="font-size:28px;font-weight:800;font-family:'Manrope',sans-serif;color:#c0392b;margin-bottom:6px;">↑ 34%</div>
         <div style="font-weight:700;font-family:'Manrope',sans-serif;font-size:15px;color:#1F1F1F;margin-bottom:8px;">Espacio Desperdiciado</div>
         <p style="font-size:13px;color:#8a7070;line-height:1.6;margin:0;">La carga ineficiente deja capacidad crítica sin usar en cada envío.</p>
       </div>
- 
+
       <div class="pain-card">
         <div style="font-size:36px;margin-bottom:10px;">💸</div>
         <div style="font-size:28px;font-weight:800;font-family:'Manrope',sans-serif;color:#c0392b;margin-bottom:6px;">↑ $2,400</div>
         <div style="font-weight:700;font-family:'Manrope',sans-serif;font-size:15px;color:#1F1F1F;margin-bottom:8px;">Costos Operativos</div>
         <p style="font-size:13px;color:#8a7070;line-height:1.6;margin:0;">Las decisiones manuales inflan los gastos generales mediante ciclos de error repetidos.</p>
       </div>
- 
+
       <div class="pain-card">
         <div style="font-size:36px;margin-bottom:10px;">📉</div>
         <div style="font-size:28px;font-weight:800;font-family:'Manrope',sans-serif;color:#c0392b;margin-bottom:6px;">↓ 41%</div>
         <div style="font-weight:700;font-family:'Manrope',sans-serif;font-size:15px;color:#1F1F1F;margin-bottom:8px;">Eficiencia Logística</div>
         <p style="font-size:13px;color:#8a7070;line-height:1.6;margin:0;">Las heurísticas humanas fallan al evaluar compensaciones complejas de peso-valor.</p>
       </div>
- 
+
     </div>
   </section>
- 
+
   <!-- ═══════════════════════════ SOLUTION ═══════════════════════════ -->
   <section id="solution" style="background:rgba(62,95,68,0.04); border-top:1px solid rgba(62,95,68,0.08); border-bottom:1px solid rgba(62,95,68,0.08); padding:80px 0;">
     <div style="max-width:1120px;margin:0 auto;padding:0 28px;">
- 
+
       <div style="max-width:560px;margin:0 0 52px;">
         <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5E7B63;margin-bottom:14px;font-family:'Manrope',sans-serif;">Nuestra Solución</div>
         <h2 style="font-size:clamp(28px,4vw,40px);font-weight:800;line-height:1.15;letter-spacing:-0.02em;color:#1F1F1F;margin:0 0 20px;">Optimización más allá de la intuición humana.</h2>
@@ -182,9 +181,9 @@
           IntelliCargo utiliza algoritmos de optimización avanzados para analizar peso, valor y espacio — maximizando la rentabilidad en cada ejecución.
         </p>
       </div>
- 
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;">
- 
+
+      <div class="algo-grid">
+
         <!-- DP -->
         <div class="glass" style="border-radius:18px;padding:26px 22px;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(62,95,68,0.14)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
           <div style="width:44px;height:44px;background:#3E5F44;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
@@ -194,7 +193,7 @@
           <p style="font-size:13px;line-height:1.65;color:#5a6b5d;margin:0 0 14px;">Determina la combinación de carga más rentable con certeza matemática.</p>
           <span class="badge">O(n · W)</span>
         </div>
- 
+
         <!-- Greedy -->
         <div class="glass" style="border-radius:18px;padding:26px 22px;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(62,95,68,0.14)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
           <div style="width:44px;height:44px;background:#5E7B63;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
@@ -204,7 +203,7 @@
           <p style="font-size:13px;line-height:1.65;color:#5a6b5d;margin:0 0 14px;">Prioriza la carga de alto valor para decisiones rápidas y casi óptimas bajo presión de tiempo.</p>
           <span class="badge">O(n log n)</span>
         </div>
- 
+
         <!-- Backtracking -->
         <div class="glass" style="border-radius:18px;padding:26px 22px;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(62,95,68,0.14)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
           <div style="width:44px;height:44px;background:#4a7050;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
@@ -214,7 +213,7 @@
           <p style="font-size:13px;line-height:1.65;color:#5a6b5d;margin:0 0 14px;">Encuentra distribuciones espaciales eficientes explorando y podando el espacio de soluciones.</p>
           <span class="badge">Exponential</span>
         </div>
- 
+
         <!-- Sorting -->
         <div class="glass" style="border-radius:18px;padding:26px 22px;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 40px rgba(62,95,68,0.14)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
           <div style="width:44px;height:44px;background:#3E5F44;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
@@ -224,20 +223,20 @@
           <p style="font-size:13px;line-height:1.65;color:#5a6b5d;margin:0 0 14px;">Clasifica los datos de carga al instante para un flujo de pipeline sin interrupciones.</p>
           <span class="badge">O(n log n)</span>
         </div>
- 
+
       </div>
     </div>
   </section>
- 
+
   <!-- ═══════════════════════════ PIPELINE ═══════════════════════════ -->
   <section style="max-width:1120px;margin:0 auto;padding:80px 28px;">
     <div style="text-align:center;margin-bottom:52px;">
       <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5E7B63;margin-bottom:14px;font-family:'Manrope',sans-serif;">Cómo Funciona</div>
       <h2 style="font-size:clamp(26px,3.5vw,38px);font-weight:800;letter-spacing:-0.02em;color:#1F1F1F;margin:0;">De datos brutos a carga óptima — en segundos.</h2>
     </div>
- 
-    <div style="display:flex;align-items:flex-start;gap:0;">
- 
+
+    <div class="pipeline-flow" style="gap:0;">
+
       <!-- Step 1 -->
       <div class="pipeline-step">
         <div class="pipeline-icon">
@@ -246,10 +245,10 @@
         <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#1F1F1F;text-align:center;line-height:1.4;">Cargar Paquetes</div>
         <div style="font-size:12px;color:#8a9e8d;text-align:center;line-height:1.5;max-width:100px;">Ingresar specs y pesos de carga</div>
       </div>
- 
+
       <!-- Arrow -->
-      <div style="flex:0;padding-top:25px;color:#c8d8ca;font-size:22px;">→</div>
- 
+      <div class="pipeline-arrow">→</div>
+
       <!-- Step 2 -->
       <div class="pipeline-step">
         <div class="pipeline-icon">
@@ -258,10 +257,10 @@
         <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#1F1F1F;text-align:center;line-height:1.4;">Clasificación Inteligente</div>
         <div style="font-size:12px;color:#8a9e8d;text-align:center;line-height:1.5;max-width:110px;">Merge/Quicksort por densidad de valor</div>
       </div>
- 
+
       <!-- Arrow -->
-      <div style="flex:0;padding-top:25px;color:#c8d8ca;font-size:22px;">→</div>
- 
+      <div class="pipeline-arrow">→</div>
+
       <!-- Step 3 -->
       <div class="pipeline-step">
         <div class="pipeline-icon">
@@ -270,10 +269,10 @@
         <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#1F1F1F;text-align:center;line-height:1.4;">Optimización Matemática</div>
         <div style="font-size:12px;color:#8a9e8d;text-align:center;line-height:1.5;max-width:110px;">PD &amp; Voraz calculan mejores subconjuntos</div>
       </div>
- 
+
       <!-- Arrow -->
-      <div style="flex:0;padding-top:25px;color:#c8d8ca;font-size:22px;">→</div>
- 
+      <div class="pipeline-arrow">→</div>
+
       <!-- Step 4 -->
       <div class="pipeline-step">
         <div class="pipeline-icon">
@@ -282,10 +281,10 @@
         <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#1F1F1F;text-align:center;line-height:1.4;">Distribución Física</div>
         <div style="font-size:12px;color:#8a9e8d;text-align:center;line-height:1.5;max-width:100px;">Disposición espacial vía Vuelta Atrás</div>
       </div>
- 
+
       <!-- Arrow -->
-      <div style="flex:0;padding-top:25px;color:#c8d8ca;font-size:22px;">→</div>
- 
+      <div class="pipeline-arrow">→</div>
+
       <!-- Step 5 -->
       <div class="pipeline-step">
         <div class="pipeline-icon" style="background:#3E5F44;border-color:#3E5F44;">
@@ -294,10 +293,10 @@
         <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;color:#3E5F44;text-align:center;line-height:1.4;">Resultado Óptimo</div>
         <div style="font-size:12px;color:#8a9e8d;text-align:center;line-height:1.5;max-width:100px;">Plan de carga de máximo valor entregado</div>
       </div>
- 
+
     </div>
   </section>
- 
+
   <!-- ═══════════════════════════ ENGINE ═══════════════════════════ -->
   <section id="engine" style="padding:80px 0;">
     <div style="max-width:1120px;margin:0 auto;padding:0 28px;">
@@ -305,10 +304,10 @@
         <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5E7B63;margin-bottom:14px;font-family:'Manrope',sans-serif;">Demo Interactivo</div>
         <h2 style="font-size:clamp(26px,3.5vw,38px);font-weight:800;letter-spacing:-0.02em;color:#1F1F1F;margin:0;">El Motor en Acción</h2>
       </div>
- 
+
       <!-- Dark glass container -->
-      <div class="engine-glass" style="border-radius:24px;padding:40px;box-shadow:0 32px 80px rgba(0,0,0,0.22);">
- 
+      <div class="engine-glass engine-pad" style="border-radius:24px;padding:40px;box-shadow:0 32px 80px rgba(0,0,0,0.22);">
+
         <!-- Form -->
         <div style="display:flex;align-items:flex-end;gap:16px;margin-bottom:36px;flex-wrap:wrap;">
           <div style="flex:1;min-width:240px;">
@@ -319,10 +318,10 @@
             Analizar Algoritmos
           </button>
         </div>
- 
+
         <!-- Results grid -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;" id="resultsGrid">
- 
+        <div class="results-grid" id="resultsGrid">
+
           <!-- DP Card -->
           <div id="dpCard" style="background:rgba(62,95,68,0.18);border:1px solid rgba(94,123,99,0.3);border-radius:18px;padding:28px;">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
@@ -332,7 +331,7 @@
               </div>
               <span class="badge" style="background:rgba(62,95,68,0.35);color:#9EC9A5;">O(n · W)</span>
             </div>
- 
+
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
               <div style="background:rgba(0,0,0,0.2);border-radius:12px;padding:14px;">
                 <div style="font-size:11px;font-weight:700;letter-spacing:0.06em;color:rgba(250,248,243,0.45);font-family:'Manrope',sans-serif;margin-bottom:4px;">VALOR MÁX.</div>
@@ -343,11 +342,11 @@
                 <div id="dp-weight" style="font-size:24px;font-weight:800;color:#9EC9A5;font-family:'Manrope',sans-serif;">—</div>
               </div>
             </div>
- 
+
             <div style="font-size:11px;font-weight:700;letter-spacing:0.06em;color:rgba(250,248,243,0.45);font-family:'Manrope',sans-serif;margin-bottom:10px;">PAQUETES SELECCIONADOS</div>
             <div id="dp-packages" style="min-height:60px;font-size:13px;color:rgba(250,248,243,0.55);font-style:italic;">Ejecuta el análisis para ver resultados…</div>
           </div>
- 
+
           <!-- Greedy Card -->
           <div id="greedyCard" style="background:rgba(94,123,99,0.14);border:1px solid rgba(94,123,99,0.25);border-radius:18px;padding:28px;">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
@@ -357,7 +356,7 @@
               </div>
               <span class="badge" style="background:rgba(94,123,99,0.3);color:#9EC9A5;">O(n log n)</span>
             </div>
- 
+
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
               <div style="background:rgba(0,0,0,0.2);border-radius:12px;padding:14px;">
                 <div style="font-size:11px;font-weight:700;letter-spacing:0.06em;color:rgba(250,248,243,0.45);font-family:'Manrope',sans-serif;margin-bottom:4px;">VALOR MÁX.</div>
@@ -368,26 +367,26 @@
                 <div id="greedy-weight" style="font-size:24px;font-weight:800;color:#9EC9A5;font-family:'Manrope',sans-serif;">—</div>
               </div>
             </div>
- 
+
             <div style="font-size:11px;font-weight:700;letter-spacing:0.06em;color:rgba(250,248,243,0.45);font-family:'Manrope',sans-serif;margin-bottom:10px;">PAQUETES SELECCIONADOS</div>
             <div id="greedy-packages" style="min-height:60px;font-size:13px;color:rgba(250,248,243,0.55);font-style:italic;">Ejecuta el análisis para ver resultados…</div>
           </div>
- 
+
         </div>
- 
+
         <p style="font-size:12px;color:rgba(250,248,243,0.3);margin:20px 0 0;text-align:center;font-family:'Manrope',sans-serif;">Conecta tu JS a <code style="background:rgba(255,255,255,0.08);padding:2px 6px;border-radius:4px;">#maxCapacity</code>, <code style="background:rgba(255,255,255,0.08);padding:2px 6px;border-radius:4px;">#analyzeBtn</code>, <code style="background:rgba(255,255,255,0.08);padding:2px 6px;border-radius:4px;">#dp-value</code>, <code style="background:rgba(255,255,255,0.08);padding:2px 6px;border-radius:4px;">#greedy-value</code> y similares.</p>
       </div>
     </div>
   </section>
- 
+
   <!-- ═══════════════════════════ COMPARISON TABLE ═══════════════════════════ -->
   <section id="compare" style="max-width:1120px;margin:0 auto;padding:80px 28px;">
     <div style="text-align:center;margin-bottom:52px;">
       <div style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5E7B63;margin-bottom:14px;font-family:'Manrope',sans-serif;">Por Qué IntelliCargo</div>
       <h2 style="font-size:clamp(26px,3.5vw,38px);font-weight:800;letter-spacing:-0.02em;color:#1F1F1F;margin:0;">Tradicional vs IntelliCargo</h2>
     </div>
- 
-    <div style="background:var(--card);border:1px solid rgba(62,95,68,0.1);border-radius:20px;overflow:hidden;box-shadow:0 8px 32px rgba(62,95,68,0.07);">
+
+    <div class="table-wrap" style="background:var(--card);border:1px solid rgba(62,95,68,0.1);border-radius:20px;overflow:hidden;box-shadow:0 8px 32px rgba(62,95,68,0.07);">
       <table>
         <thead>
           <tr style="background:rgba(62,95,68,0.05);">
@@ -436,7 +435,7 @@
       </table>
     </div>
   </section>
- 
+
   <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
   <footer style="border-top:1px solid rgba(62,95,68,0.1);padding:36px 28px;margin-top:20px;">
     <div style="max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
@@ -447,10 +446,10 @@
       <div style="font-size:13px;color:#8a9e8d;">Optimización Inteligente de Carga · Cada kilogramo importa.</div>
     </div>
   </footer>
- 
-   <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
+
+  <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
     
    <script src="app.js"></script>
- 
+
 </body>
 </html>

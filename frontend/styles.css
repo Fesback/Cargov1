@@ -201,3 +201,74 @@
     padding: 24px;
     text-align: center;
   }
+
+  /* ════════════════════════════════════════
+     RESPONSIVE
+  ════════════════════════════════════════ */
+
+  /* Nav */
+  .nav-links { display: flex; gap: 28px; }
+  .nav-cta   { display: block; }
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .nav-cta   { display: none; }
+  }
+
+  /* Hero */
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  @media (max-width: 768px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+      padding-top: 52px !important;
+      padding-bottom: 40px !important;
+    }
+    .hero-visual { display: none; }
+  }
+
+  /* Pain cards */
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 900px) { .pain-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .pain-grid { grid-template-columns: 1fr; } }
+
+  /* Algorithm cards */
+  .algo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  @media (max-width: 900px) { .algo-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .algo-grid { grid-template-columns: 1fr; } }
+
+  /* Pipeline */
+  .pipeline-flow { display: flex; align-items: flex-start; }
+  .pipeline-arrow { flex: 0; padding-top: 25px; color: #c8d8ca; font-size: 22px; }
+  @media (max-width: 700px) {
+    .pipeline-flow  { flex-direction: column; align-items: center; gap: 6px; }
+    .pipeline-arrow { transform: rotate(90deg); padding-top: 0; font-size: 20px; }
+  }
+
+  /* Engine results */
+  .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 640px) {
+    .results-grid { grid-template-columns: 1fr; }
+    .engine-pad   { padding: 24px !important; }
+  }
+
+  /* Table scroll */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  @media (max-width: 560px) { td, th { padding: 10px 12px; font-size: 13px; } }
+
+  /* General section padding */
+  @media (max-width: 640px) {
+    .sec { padding-left: 18px !important; padding-right: 18px !important; }
+  }
